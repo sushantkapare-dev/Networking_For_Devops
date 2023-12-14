@@ -158,6 +158,7 @@ In computer networking, ports play a crucial role in facilitating communication 
 
 # what is OSI Model ?
 ![image](https://github.com/SushantOps/Networking_For_Devops/assets/109059766/8c3b04fc-331c-4a21-b25e-54e7ee4e0e6a)
+
 The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven abstraction layers. Developed by the International Organization for Standardization (ISO), the OSI model serves as a reference for understanding and designing network architectures. Each layer in the OSI model has specific responsibilities, and communication between layers is defined by protocols. Here are the seven layers of the OSI model, from the lowest to the highest:
 
 1. **Physical Layer (Layer 1):**
@@ -184,6 +185,7 @@ The OSI (Open Systems Interconnection) model is a conceptual framework that stan
 
 # what is TCP/IP Model?
 ![image](https://github.com/SushantOps/Networking_For_Devops/assets/109059766/72ec1437-a3b0-4d32-9812-efcc1edd0727)
+
 The TCP/IP model, also known as the Internet protocol suite, is a conceptual framework used for designing and understanding networking protocols and communication over the Internet. It is named after its two most important protocols: Transmission Control Protocol (TCP) and Internet Protocol (IP). The TCP/IP model consists of four layers, each responsible for specific functions. Here are the layers of the TCP/IP model, from the lowest to the highest:
 
 1. **Link Layer (or Network Interface Layer):**
@@ -201,6 +203,7 @@ The TCP/IP model, also known as the Internet protocol suite, is a conceptual fra
 
 # Diff between OSI and TCP/IP model?
 ![image](https://github.com/SushantOps/Networking_For_Devops/assets/109059766/9a892b9d-3569-47da-be46-5875af390171)
+
 The OSI (Open Systems Interconnection) model and the TCP/IP (Transmission Control Protocol/Internet Protocol) model are both conceptual frameworks used to understand and design network protocols. While they share similarities, they differ in terms of structure, layering, and historical development. Here are some key differences between the OSI model and the TCP/IP model:
 
 1. **Number of Layers:**
