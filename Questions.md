@@ -128,11 +128,97 @@ For example, if you have the IP address range 192.168.1.0 with a subnet mask of 
 Subnetting is a fundamental skill for network administrators and engineers, and it plays a crucial role in designing and managing modern IP networks.
 
 # Diff between Public and Private Subnet?
+A public subnet and a private subnet are two distinct types of subnets within a network, primarily differentiated by their accessibility from the Internet. A public subnet is configured to have direct connectivity to the Internet, often hosting resources such as web servers or public-facing applications. Public subnets typically have a route to an Internet gateway, allowing outbound traffic to reach the Internet, and they are assigned public IP addresses that are routable on the global Internet.
+
+On the other hand, a private subnet is designed to be isolated from direct Internet access and is intended for resources that should not be directly exposed to the public. This includes databases, application servers, or internal systems. Private subnets use Network Address Translation (NAT) to allow instances within the private subnet to initiate outbound connections to the Internet while keeping them hidden behind a single public IP address. This adds an extra layer of security, as resources in a private subnet are not directly reachable from external networks.
 
 # What is the purpose of Ports in Networking?
+In computer networking, ports play a crucial role in facilitating communication between different applications and services within a system. A port is a logical endpoint for network communications, and it is identified by a numerical value known as the port number. The combination of an IP address and a port number is used to uniquely identify a specific process or service on a device in a network. Here are the main purposes of ports in networking:
+
+1. **Process Identification:**
+   - Ports help identify specific processes or services running on a device. When data is sent over a network, the port number is used along with the IP address to route the information to the correct application or service.
+
+2. **Multiplexing and Demultiplexing:**
+   - Multiplexing is the process of combining multiple data streams into a single stream, and demultiplexing is the reverse process of separating the combined stream back into individual streams. Ports facilitate this by allowing multiple applications or services to run concurrently on a device, each with its own unique port number.
+
+3. **Service Differentiation:**
+   - Ports are standardized to represent specific services or protocols. For example, web traffic commonly uses port 80 for HTTP and port 443 for HTTPS. By using standardized port numbers, devices can easily identify the type of service or protocol being used, allowing for seamless communication between different systems.
+
+4. **End-to-End Communication:**
+   - Ports enable end-to-end communication between applications on different devices. When a device sends data to another device, the destination port helps the receiving device determine which application or service should handle the incoming data.
+
+5. **Firewall Configuration:**
+   - Firewalls use port numbers to control the flow of traffic and enforce security policies. By allowing or blocking specific port numbers, administrators can control which services are accessible from the network and which are restricted, thereby enhancing network security.
+
+6. **Socket Communication:**
+   - Sockets are the combination of an IP address and a port number. They establish communication channels between applications on different devices. Sockets are fundamental for establishing connections, sending and receiving data, and managing network communication.
+
+7. **Dynamic Port Assignment:**
+   - Some ports are reserved for well-known services, but dynamic or ephemeral ports (those in the range 49152 to 65535) are assigned dynamically by the operating system for temporary use. These ports are typically used for client-side communication.
 
 # what is OSI Model ?
+![image](https://github.com/SushantOps/Networking_For_Devops/assets/109059766/8c3b04fc-331c-4a21-b25e-54e7ee4e0e6a)
+The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven abstraction layers. Developed by the International Organization for Standardization (ISO), the OSI model serves as a reference for understanding and designing network architectures. Each layer in the OSI model has specific responsibilities, and communication between layers is defined by protocols. Here are the seven layers of the OSI model, from the lowest to the highest:
+
+1. **Physical Layer (Layer 1):**
+   - **Function:** The physical layer deals with the physical connection between devices. It defines the hardware characteristics such as cables, connectors, voltage levels, and transmission rates. The primary focus is on transmitting raw bits over a physical medium.
+
+2. **Data Link Layer (Layer 2):**
+   - **Function:** The data link layer provides reliable point-to-point communication over the physical layer. It is responsible for framing, addressing, error detection, and flow control within a local network. Ethernet and Wi-Fi are examples of data link layer technologies.
+
+3. **Network Layer (Layer 3):**
+   - **Function:** The network layer handles the routing and forwarding of data packets between devices on different networks. It is responsible for logical addressing, such as IP addresses, and determines the best path for data to travel between source and destination devices. Routers operate at the network layer.
+
+4. **Transport Layer (Layer 4):**
+   - **Function:** The transport layer ensures end-to-end communication by providing error detection, error correction, and flow control. It is responsible for segmenting and reassembling data into manageable chunks. Transmission Control Protocol (TCP) and User Datagram Protocol (UDP) operate at the transport layer.
+
+5. **Session Layer (Layer 5):**
+   - **Function:** The session layer establishes, maintains, and terminates communication sessions between applications. It manages dialog control, allowing data exchange to occur in full-duplex or half-duplex mode. Session layer services include session establishment, data synchronization, and session termination.
+
+6. **Presentation Layer (Layer 6):**
+   - **Function:** The presentation layer is responsible for translating data between the application layer and the lower layers. It handles data compression, encryption, and character set conversions to ensure that data sent by one application can be properly interpreted by another. This layer deals with syntax and semantics of data.
+
+7. **Application Layer (Layer 7):**
+   - **Function:** The application layer provides network services directly to end-users or applications. It enables communication between software applications and the network. Protocols at this layer include HTTP, SMTP, and FTP. This layer interacts directly with software applications, providing network services such as file transfer, email, and web browsing.
+
 
 # what is TCP/IP Model?
+![image](https://github.com/SushantOps/Networking_For_Devops/assets/109059766/72ec1437-a3b0-4d32-9812-efcc1edd0727)
+The TCP/IP model, also known as the Internet protocol suite, is a conceptual framework used for designing and understanding networking protocols and communication over the Internet. It is named after its two most important protocols: Transmission Control Protocol (TCP) and Internet Protocol (IP). The TCP/IP model consists of four layers, each responsible for specific functions. Here are the layers of the TCP/IP model, from the lowest to the highest:
+
+1. **Link Layer (or Network Interface Layer):**
+   - **Function:** Equivalent to the combination of the OSI model's physical and data link layers. The Link Layer deals with the physical and logical connections to the network medium, including hardware addressing, framing, and error detection. Ethernet, Wi-Fi, and PPP are examples of link layer technologies.
+
+2. **Internet Layer:**
+   - **Function:** Equivalent to the OSI model's network layer. The Internet Layer is responsible for routing packets between different networks. It uses logical addressing (IP addresses) to identify devices on a network and determines the best path for data transmission. The Internet Protocol (IP) operates at this layer.
+
+3. **Transport Layer:**
+   - **Function:** Similar to the OSI model's transport layer. The Transport Layer ensures reliable end-to-end communication, segmenting and reassembling data, providing error detection, and managing flow control. The primary protocols at this layer are Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).
+
+4. **Application Layer:**
+   - **Function:** Similar to the OSI model's presentation and application layers combined. The Application Layer provides network services directly to end-users or applications. It supports communication between software applications and the network. Protocols at this layer include HTTP, FTP, SMTP, and DNS.
+
 
 # Diff between OSI and TCP/IP model?
+![image](https://github.com/SushantOps/Networking_For_Devops/assets/109059766/9a892b9d-3569-47da-be46-5875af390171)
+The OSI (Open Systems Interconnection) model and the TCP/IP (Transmission Control Protocol/Internet Protocol) model are both conceptual frameworks used to understand and design network protocols. While they share similarities, they differ in terms of structure, layering, and historical development. Here are some key differences between the OSI model and the TCP/IP model:
+
+1. **Number of Layers:**
+   - **OSI Model:** The OSI model consists of seven layers, each with a specific set of functions. The layers, from the lowest to the highest, are Physical, Data Link, Network, Transport, Session, Presentation, and Application.
+   - **TCP/IP Model:** The TCP/IP model comprises four layers: Link, Internet, Transport, and Application. The functions of the lower layers of the OSI model are combined into the Link layer of the TCP/IP model, and the Presentation and Session layers are combined into the Application layer.
+
+2. **Layer Functions:**
+   - **OSI Model:** Each layer in the OSI model has well-defined functions, and each layer communicates with the layers directly above and below it. The model emphasizes a clear separation of concerns and responsibilities.
+   - **TCP/IP Model:** The TCP/IP model combines functions from multiple OSI layers into a smaller number of layers. For example, the TCP/IP model's Application layer encompasses both the Presentation and Application layers of the OSI model.
+
+3. **Development History:**
+   - **OSI Model:** Developed by the International Organization for Standardization (ISO) to provide a comprehensive framework for networking standards. While widely used for educational purposes, the OSI model had limited adoption in real-world implementations.
+   - **TCP/IP Model:** Evolved from the ARPANET project and was developed by the U.S. Department of Defense. It gained prominence as the Internet protocol suite and became the de facto standard for networking.
+
+4. **Practical Implementation:**
+   - **OSI Model:** Although the OSI model is a theoretical framework, it is not as commonly implemented in practice. It serves as a reference model for understanding network concepts.
+   - **TCP/IP Model:** The TCP/IP model is directly tied to the development of the Internet and is widely used in practical networking implementations. TCP/IP protocols form the basis of the global Internet.
+
+5. **Layer Names:**
+   - **OSI Model:** The layer names are Physical, Data Link, Network, Transport, Session, Presentation, and Application.
+   - **TCP/IP Model:** The layer names are Link, Internet, Transport, and Application.
