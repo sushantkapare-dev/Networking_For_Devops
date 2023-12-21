@@ -21,6 +21,8 @@ DNS resolution is a critical part of the Internet infrastructure, ensuring that 
 
 ## what is TCP handshack?
 
+![image](https://github.com/SushantOps/Networking_For_Devops/assets/109059766/f16886a4-099c-4260-9e02-a98971663d77)
+
 The TCP (Transmission Control Protocol) handshake is a three-step process that establishes a reliable communication connection between two devices, typically a client and a server, before they start exchanging data. This process is part of the TCP/IP suite and is essential for ensuring that both ends of the connection are ready to send and receive data. The TCP handshake is also known as the "three-way handshake."
 
 Here are the three steps involved in the TCP handshake:
